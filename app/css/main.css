@@ -1,0 +1,39 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+  background-color: #343433;
+  color: #D8D8D8;
+  font-family: "QuickSand", sans-serif;
+}
+
+.navbar {
+  height: 18vh;
+  background-color: #D8D8D8;
+  color: #343433;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__logo span {
+  line-height: 1.1;
+}
+
+.navbar__logo span:nth-child(1) {
+  letter-spacing: 15px;
+  font-size: 1.3rem;
+}
+
+.navbar__logo span:nth-child(2) {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.navbar__control {
+  display: flex;
+  flex: 1;
+}
