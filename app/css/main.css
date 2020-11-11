@@ -41,6 +41,15 @@ body {
 .bar-container {
   height: 70vh;
   border-bottom: 10px solid #575757;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.bar {
+  height: 100%;
+  width: 4px;
+  background-color: #D8D8D8;
 }
 
 .model {
@@ -53,6 +62,7 @@ body {
   display: none;
   align-items: center;
   justify-content: center;
+  animation: fade-in 350ms ease-in;
 }
 
 .model__box {
@@ -102,4 +112,13 @@ body {
 #close-model:hover {
   letter-spacing: 3px;
   transform: scale(1.2);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

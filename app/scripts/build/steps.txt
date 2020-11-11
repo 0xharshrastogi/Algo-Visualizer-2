@@ -1,0 +1,14 @@
+Create 
+    Bar Class
+        Properties:
+            barId: unique value for every bar
+            value: randomly assigned value b/w range of 5 and height of container of       object this is height of bar
+
+
+Create 
+    Bar Element
+        Append To Parent
+
+
+
+

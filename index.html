@@ -29,8 +29,12 @@
 
 
             <section class="navbar__control">
-                <button class="btn mr-2 ml-auto">
+                <button class="btn mr-2 ml-auto" id="ctrl-btn">
                     Control
+                </button>
+
+                <button class="btn mr-2" id="ctrl-btn">
+                    Sort
                 </button>
 
                 <button class="btn">
@@ -40,6 +44,7 @@
         </nav>
 
         <section class="bar-container m-2">
+            <!-- Script Will Add Value -->
         </section>
     </main>
 
@@ -102,6 +107,11 @@
             </button>
         </section>
     </section>
+
+    <script src="app/scripts/event/events.js"></script>
+    <!-- <script src="app/scripts/build/module-bar/main.js"></script> -->
+    <!-- <script type="module" src="app/scripts/build/module-bar/main.js"></script> -->
+    <script type="module" src="app/scripts/build/create-bars-element/create-bars-element.js"></script>
 </body>
 
 </html>
