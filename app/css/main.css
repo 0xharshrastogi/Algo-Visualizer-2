@@ -1,0 +1,105 @@
+body {
+  height: 100vh;
+  background-color: #343433;
+  color: #D8D8D8;
+  font-family: "QuickSand", sans-serif;
+  position: relative;
+}
+
+.navbar {
+  height: 18vh;
+  background-color: #D8D8D8;
+  color: #343433;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__logo span {
+  line-height: 1.1;
+}
+
+.navbar__logo span:nth-child(1) {
+  letter-spacing: 15px;
+  font-size: 1.3rem;
+}
+
+.navbar__logo span:nth-child(2) {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.navbar__control {
+  display: flex;
+  flex: 1;
+}
+
+.bar-container {
+  height: 70vh;
+  border-bottom: 10px solid #575757;
+}
+
+.model {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(87, 87, 87, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.model__box {
+  width: 500px;
+  border-radius: 10px;
+  color: #343433;
+  background-color: #D8D8D8;
+  display: grid;
+  position: relative;
+  grid-template-rows: auto 1fr auto;
+}
+
+.model h2 {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.field-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.field-wrapper label {
+  display: inline-block;
+  margin-right: 3rem;
+}
+
+#close-model {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: none;
+  transform: scale(1);
+  transition: all 200ms;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+}
+
+#close-model:hover {
+  letter-spacing: 3px;
+  transform: scale(1.2);
+}

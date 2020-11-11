@@ -1,0 +1,28 @@
+.form
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    gap: 1rem
+    // background: red
+.field-wrapper
+    display: flex
+    align-items: center
+    label
+        display: inline-block
+        margin-right: 3rem
+#close-model
+    position: absolute
+    top: 15px
+    right: 15px
+
+    border: none
+    background: none
+
+    transform: scale(1)
+    transition: all 200ms
+    letter-spacing: 1px
+    cursor: pointer
+    outline: none
+    &:hover
+        letter-spacing: 3px
+        transform: scale(1.2)
