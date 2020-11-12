@@ -7,7 +7,7 @@ const genrateBetween = (min, max) => {
 };
 
 const genrateRandomID = () => {
-	const range = [9, 4, 2, 1, 7, 8, 3, 0, 5, "@", "u"];
+	const range = ["9", "4", "2", "1", "7", "8", "3", "a", "5", "b", "c"];
 
 	let randomID = "";
 
@@ -15,7 +15,7 @@ const genrateRandomID = () => {
 		const index = genrateBetween(0, 11);
 		randomID += range[index];
 	}
-
+	console.log(randomID);
 	return randomID;
 };
 // Genrate A Callback Function To Gentarte Value Between

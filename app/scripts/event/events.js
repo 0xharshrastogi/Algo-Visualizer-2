@@ -1,3 +1,5 @@
+"use strict";
+
 function setEventListner() {
 	const controlBtn = document.getElementById("ctrl-btn");
 
@@ -12,7 +14,7 @@ function setEventListner() {
 	//close the model box
 	closeButton.addEventListener("click", () => {
 		const modelElement = document.querySelector(".model");
-        
+
 		modelElement.style.display = "";
 	});
 }

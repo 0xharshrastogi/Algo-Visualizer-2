@@ -1,5 +1,13 @@
-import { Bar } from "./bar.js";
+"use strict";
+import setup from "../create-bars-element/create-bars-element.js";
 
-const bar = new Bar();
+let collection = setup(10);
 
-console.log(bar.id, bar.value);
+document.getElementById("sort-btn").addEventListener("click", () => {
+	document.querySelector(".bar-container").innerHTML = "";
+	collection = setup(10);
+});
+console.log(collection);
+document.getElementById("start-sort").addEventListener("click", () => {
+	selectionSort(collection);
+});

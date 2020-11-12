@@ -1,30 +1,46 @@
+"use strict";
 import { Bar } from "../module-bar/bar.js";
+import DataSet from "../mudule-dataSet/dataSet.js";
 
-const createBarElement = (barId, height) => {
+const createBarElement = (barId, height, width) => {
 	const barElement = document.createElement("div");
 
 	barElement.setAttribute("id", barId);
 	barElement.style.height = height + "px";
+	barElement.style.width = width + "px";
 	barElement.className = "bar";
+	barElement.style.transform;
 
 	return barElement;
 };
 
 const addBarsTo = () => {
 	const barWrapper = document.querySelector(".bar-container");
+	const wrapperWidth = barWrapper.clientWidth;
 
-	return function (element) {
-		barWrapper.appendChild(element);
+	const callBackFunc = (element) => {
+		barWrapper.append(element);
 	};
+	return [wrapperWidth, callBackFunc];
 };
 
-const appendBars = () => {
-	const add = addBarsTo(),
-		bar = new Bar();
+export default function (count) {
+	if (!count) {
+		throw new Error("Invalid Value Passed");
+	}
+	const [wrapperWidth, add] = addBarsTo();
 
-	add(createBarElement(bar.id, bar.value));
-};
+	const width = wrapperWidth / count;
 
-for (let i = 0; i < 20; i++) {
-	appendBars();
+	const dataCollection = new DataSet();
+	for (let i = 0; i < count; i++) {
+		let bar = new Bar(),
+			element = createBarElement(bar.id, bar.value, width - width * 0.1);
+
+		add(element);
+		dataCollection.push(bar.id, bar.value);
+	}
+
+	return dataCollection;
 }
+// let collection = appendBar(200)
