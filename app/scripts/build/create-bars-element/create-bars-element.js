@@ -5,18 +5,17 @@ import DataSet from "../mudule-dataSet/dataSet.js";
 const createBarElement = (barId, height, width) => {
 	const barElement = document.createElement("div");
 
-	barElement.setAttribute("id", barId);
-	barElement.style.height = height + "px";
-	barElement.style.width = width + "px";
+	barElement.id = `${barId}`;
+	barElement.style.height = `${height}px`;
+	barElement.style.width = `${width}px`;
 	barElement.className = "bar";
-	barElement.style.transform;
 
 	return barElement;
 };
 
 const addBarsTo = () => {
-	const barWrapper = document.querySelector(".bar-container");
-	const wrapperWidth = barWrapper.clientWidth;
+	const barWrapper = document.querySelector(".bar-container"),
+		wrapperWidth = barWrapper.clientWidth;
 
 	const callBackFunc = (element) => {
 		barWrapper.append(element);
@@ -30,17 +29,16 @@ export default function (count) {
 	}
 	const [wrapperWidth, add] = addBarsTo();
 
-	const width = wrapperWidth / count;
+	const width = (wrapperWidth / count) * 0.99;
 
 	const dataCollection = new DataSet();
 	for (let i = 0; i < count; i++) {
 		let bar = new Bar(),
-			element = createBarElement(bar.id, bar.value, width - width * 0.1);
+			element = createBarElement(bar.id, bar.value, width);
 
-		add(element);
+		setTimeout(add, 0, element);
 		dataCollection.push(bar.id, bar.value);
 	}
 
 	return dataCollection;
 }
-// let collection = appendBar(200)

@@ -1,5 +1,4 @@
 export default class DataSet {
-	lenght = 0;
 	constructor() {
 		this.collection = [];
 		this._length = 0;
@@ -14,5 +13,10 @@ export default class DataSet {
 	}
 	get length() {
 		return this._length;
+	}
+	toString() {
+		const output = this.collection.map((val) => val.value);
+
+		return `Length: ${this.length}\n` + output.join("->");
 	}
 }

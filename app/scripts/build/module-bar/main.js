@@ -1,13 +1,17 @@
 "use strict";
 import setup from "../create-bars-element/create-bars-element.js";
 
-let collection = setup(10);
+let collection = setup(2000);
 
 document.getElementById("sort-btn").addEventListener("click", () => {
 	document.querySelector(".bar-container").innerHTML = "";
-	collection = setup(10);
+	console.time("Suffeling");
+	collection = setup(2000);
+	console.timeEnd("Suffeling");
 });
-console.log(collection);
+// console.log(collection.to/String());
 document.getElementById("start-sort").addEventListener("click", () => {
+	console.time("Sorting");
 	selectionSort(collection);
+	console.timeEnd("Sorting");
 });
